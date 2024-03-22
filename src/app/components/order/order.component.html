@@ -1,0 +1,36 @@
+<!-- template value that only acess to value not css -->
+<!-- <input type="text" #username> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Count</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems ">
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<select class="form-select mt-5 mb-5" aria-label="Default select example" [(ngModel)]="selectedCatId">
+    <option selected disabled>Open this select menu</option>
+    <option *ngFor="let cat of catgories" [value]="cat.id">{{cat.name}}</option>
+    <option value="0">All Products</option>
+  </select>
+<h1 style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">Selected Category ID: <span style="color: #007bff; font-weight: bold;">{{selectedCatId}}</span></h1>
+
+<div class="mb-5" style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; border-radius: 5px;">
+    <p>Your total price is : <span style="color: #007bff; font-weight: bold;">{{recivedtotalPrics}}</span></p>  
+</div> 
+  <app-products [receivedCatId]="selectedCatId"
+  
+  (AddToCart)="changtotalprice($event)"
+  ></app-products>
+  
+
