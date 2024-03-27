@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { StaticPrdService } from './static-prd.service';
+import { ApiPrdService } from './api-prd.service';
 
-describe('StaticPrdService', () => {
-  let service: StaticPrdService;
+describe('ApiPrdService', () => {
+  let service: ApiPrdService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(StaticPrdService);
+    service = TestBed.inject(ApiPrdService);
   });
 
   it('should be created', () => {

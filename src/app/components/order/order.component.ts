@@ -25,13 +25,9 @@ export class OrderComponent implements AfterViewInit {
       {id:3 , name:"tablet"}
 
     ]
-
-
 }
 ngAfterViewInit(): void {
-  // this.inputElement.nativeElement.value = "hasnaa";
-
-  
+  // this.inputElement.nativeElement.value = "hasnaa";  
 }
 changtotalprice(eventData: { totalOrderPrice: number, productName: string, price: number, count: number }) {
   this.recivedtotalPrics = eventData.totalOrderPrice;

@@ -11,7 +11,7 @@ HomeComponent
 export const routes: Routes = [
     // whitout //
     {path: '' , redirectTo :'/Home' , pathMatch:'full'},
-    {path: 'Home' , component :HomeComponent},
+    {path: 'Hoproductsme' , component :HomeComponent},
     {path: 'products' , component :ProductsComponent},
     {path: 'order' , component :OrderComponent},
     {path: 'AboutUs' , component :AboutUsComponent},

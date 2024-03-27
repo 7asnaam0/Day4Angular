@@ -51,7 +51,7 @@
 
 <!-- ass3 q3 -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col" *ngFor="let prd of filterbyCatIdArr">
+  <div class="col" *ngFor="let prd of filterArr">
       <div class="card">
           <img [src]="prd.imageUrl" class="card-img-top" alt="...">
           <div class="card-body" [style.background]="(prd.quantity == 0 ? '#ddd' : 'white')">
